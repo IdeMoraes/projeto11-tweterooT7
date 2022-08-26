@@ -23,6 +23,12 @@ app.post("/sign-up",(req,res)=>{
     res.send("OK");
 });
 
+const tweets = [];
+app.post("/tweets",(req,res)=>{
+    tweets.push(req.body);
+    res.send("OK");
+});
+
 app.listen(porta,()=>{
     console.log(`Servidor aberto na porta ${chalk.blue(porta)}`)
 });
